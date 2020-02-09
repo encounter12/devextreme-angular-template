@@ -17,5 +17,10 @@ export const navigation = [
         path: '/display-data'
       }
     ]
+  },
+  {
+    text: 'Charts',
+    path: 'pages/charts',
+    icon: 'chart'
   }
 ];
