@@ -5,7 +5,13 @@ import { AuthGuardService } from './shared/services';
 import { HomeComponent } from './pages/home/home.component';
 import { ProfileComponent } from './pages/profile/profile.component';
 import { DisplayDataComponent } from './pages/display-data/display-data.component';
-import { DxDataGridModule, DxFormModule, DxButtonModule, DxTreeMapModule } from 'devextreme-angular';
+import {
+  DxDataGridModule,
+  DxFormModule,
+  DxButtonModule,
+  DxTreeMapModule,
+  DxChartModule
+} from 'devextreme-angular';
 import { ChartsComponent } from './pages/charts/charts.component';
 
 const routes: Routes = [
@@ -42,7 +48,14 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes), DxDataGridModule, DxFormModule, DxButtonModule, DxTreeMapModule],
+  imports: [
+    RouterModule.forRoot(routes),
+    DxDataGridModule,
+    DxFormModule,
+    DxButtonModule,
+    DxTreeMapModule,
+    DxChartModule
+  ],
   providers: [AuthGuardService],
   exports: [RouterModule],
   declarations: [HomeComponent, ProfileComponent, DisplayDataComponent, ChartsComponent]
